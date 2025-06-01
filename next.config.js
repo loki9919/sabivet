@@ -13,9 +13,9 @@ const nextConfig = {
       },
     ],
   },
-  // Asset prefix for GitHub Pages (uncomment and set when deploying to custom domain)
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/repository-name' : '',
-  // basePath: process.env.NODE_ENV === 'production' ? '/repository-name' : '',
+  // GitHub Pages configuration
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/sabivet' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/sabivet' : '',
 }
 
 module.exports = nextConfig 
