@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/images/sabivet-logo.jpg"/>
+            <square150x150logo src="/images/sabivet-logo.jpg"/>
+            <square310x310logo src="/images/sabivet-logo.jpg"/>
+            <wide310x150logo src="/images/sabivet-logo.jpg"/>
+            <TileColor>#376d53</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig> 

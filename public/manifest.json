@@ -1,0 +1,35 @@
+{
+  "name": "SabiVet - Cabinet Vétérinaire",
+  "short_name": "SabiVet",
+  "description": "Cabinet vétérinaire professionnel à Agadir pour soins complets de vos animaux de compagnie",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#376d53",
+  "theme_color": "#376d53",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/images/sabivet-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/sabivet-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "healthcare", "veterinary"],
+  "screenshots": [
+    {
+      "src": "/images/sabivet-logo.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+} 
