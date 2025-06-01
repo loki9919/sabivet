@@ -75,28 +75,29 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="mb-6">
+              <div className="mb-6 bg-white rounded-lg p-3 inline-block">
                 <Image
                   src={`${basePath}/images/sabivet-logo.jpg`}
                   alt="SabiVet - Cabinet Vétérinaire"
                   width={160}
                   height={50}
-                  className="h-10 w-auto object-contain filter brightness-0 invert"
+                  className="h-10 w-auto object-contain"
                   onError={(e) => {
                     // Fallback to text logo if image fails to load
                     e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'flex'
+                    e.target.parentElement.style.display = 'none'
+                    e.target.parentElement.nextSibling.style.display = 'flex'
                   }}
                 />
-                {/* Fallback text logo */}
-                <div className="hidden items-center space-x-3">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-sabivet-primary font-bold text-xl">S</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-heading font-bold">SabiVet</h3>
-                    <p className="text-sabivet-accent text-sm">Cabinet Vétérinaire</p>
-                  </div>
+              </div>
+              {/* Fallback text logo */}
+              <div className="hidden items-center space-x-3 mb-6">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                  <span className="text-sabivet-primary font-bold text-xl">S</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-heading font-bold">SabiVet</h3>
+                  <p className="text-sabivet-accent text-sm">Cabinet Vétérinaire</p>
                 </div>
               </div>
               
