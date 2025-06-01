@@ -16,21 +16,21 @@ export default function App({ Component, pageProps }) {
         <meta name="language" content="fr" />
         
         {/* Favicon and Icons */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/sabivet-logo.jpg" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/sabivet-logo.jpg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/sabivet-logo.jpg" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" type="image/x-icon" href={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/favicon.ico`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`} />
+        <link rel="manifest" href={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/manifest.json`} />
         <meta name="theme-color" content="#376d53" />
         <meta name="msapplication-TileColor" content="#376d53" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-config" content={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/browserconfig.xml`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sabivet.ma" />
         <meta property="og:title" content="SabiVet - Cabinet Vétérinaire Professionnel à Agadir" />
         <meta property="og:description" content="Services vétérinaires professionnels pour vos animaux de compagnie à Agadir, Maroc. Urgences 24h/24, consultations, chirurgie et plus." />
-        <meta property="og:image" content="/images/sabivet-logo.jpg" />
+        <meta property="og:image" content={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="SabiVet" />
@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:url" content="https://sabivet.ma" />
         <meta name="twitter:title" content="SabiVet - Cabinet Vétérinaire à Agadir" />
         <meta name="twitter:description" content="Services vétérinaires professionnels pour vos animaux de compagnie à Agadir. Urgences 24h/24." />
-        <meta name="twitter:image" content="/images/sabivet-logo.jpg" />
+        <meta name="twitter:image" content={`${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`} />
         
         {/* Local Business Schema */}
         <script
@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }) {
               "@context": "https://schema.org",
               "@type": "VeterinaryCare",
               "name": "SabiVet - Cabinet Vétérinaire",
-              "image": "/images/sabivet-logo.jpg",
+              "image": `${process.env.NODE_ENV === 'production' ? '/sabivet' : ''}/images/sabivet-logo.jpg`,
               "description": "Cabinet vétérinaire professionnel offrant des soins complets pour animaux de compagnie à Agadir, Maroc.",
               "url": "https://sabivet.ma",
               "telephone": "+212637150811",
