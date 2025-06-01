@@ -6,6 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
+  // Get the base path for GitHub Pages
+  const basePath = process.env.NODE_ENV === 'production' ? '/sabivet' : ''
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -72,7 +75,7 @@ const Header = () => {
                 <div className={`absolute -inset-2 bg-gradient-to-r from-sabivet-primary to-sabivet-secondary rounded-xl blur-sm opacity-0 group-hover:opacity-20 transition-all duration-300`}></div>
                 <div className="relative bg-white rounded-lg p-2 shadow-lg border border-sabivet-accent group-hover:shadow-xl transition-all duration-300">
                   <Image
-                    src="/images/sabivet-logo.jpg"
+                    src={`${basePath}/images/sabivet-logo.jpg`}
                     alt="SabiVet - Cabinet Vétérinaire"
                     width={isScrolled ? 160 : 200}
                     height={isScrolled ? 50 : 65}
